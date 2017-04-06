@@ -53,6 +53,24 @@ body { background-image: url("../images/bg.jpg"); background-size: 100%; }
 
 .fail .smText { position: absolute; color: #e20314; top: 27.77778rem; text-align: center; width: 100%; font-size: 0.77778rem; }
 
+.fail .yanzhengover { margin: 60px 0.83333rem; text-align: center; font-size: 1.11111rem; color: #e20314; background-color: #fff; padding: 30px; box-shadow: 0px 5px 10px rgba(88, 88, 88, 0.7); }
+
+.inputForm { clear: both; overflow: hidden; padding: 0.55556rem; margin: 0.83333rem; background-color: #fff; box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5); box-sizing: border-box; }
+
+.inputForm .title { text-align: center; font-size: 1.11111rem; color: #e20314; line-height: 2; }
+
+.inputForm label { display: block; overflow: hidden; clear: both; margin-bottom: 20px; font-size: 0.83333rem; color: #666; }
+
+.inputForm label input { border: 1px solid #ddd !important; width: 98%; height: 1.66667rem; margin: 10px 0px; box-sizing: border-box; padding: 5px 10px; outline: none; box-shadow: none; }
+
+.inputForm label input:disabled { background-color: #f9f9f9; }
+
+.inputForm .submitBtn { display: block; text-align: center; font-size: 0.83333rem; color: #fff; background-color: #00a2d4; line-height: 2.22222rem; text-decoration: none; }
+
+.exampleImg { margin: 0.83333rem; }
+
+.exampleImg img { width: 100%; }
+
 @media only screen and (max-width: 379px) { html { font-size: 18px; } }
 
 @media only screen and (min-width: 380px) and (max-width: 399px) { html { font-size: 21px; } }

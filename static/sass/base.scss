@@ -207,8 +207,68 @@ body{
     width: 100%;
     font-size: rem-calc(28px);
   }
+  .yanzhengover{
+    margin:60px  rem-calc(30px);
+    text-align: center;
+    font-size: rem-calc(40px);
+    color: #e20314;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 5px 10px rgba(88,88,88,0.7);
+  }
 }
 
+.inputForm{
+  clear: both;
+  overflow: hidden;
+  padding: rem-calc(20px);
+  margin: rem-calc(30px);
+  background-color: #fff;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  .title{
+    text-align: center;
+    font-size: rem-calc(40px);
+    color: #e20314;
+    line-height: 2;
+  }
+  label{
+    display: block;
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 20px;
+    font-size: rem-calc(30px);
+    color: #666;
+    input{
+      border: 1px solid #ddd!important;
+      width: 98%;
+      height: rem-calc(60px);
+      margin: 10px 0px;
+      box-sizing: border-box;
+      padding: 5px 10px;
+      outline: none;
+      box-shadow: none;
+      &:disabled{
+        background-color: #f9f9f9;
+      }
+    }
+  }
+  .submitBtn{
+    display: block;
+    text-align: center;
+    font-size: rem-calc(30px);
+    color: #fff;
+    background-color: #00a2d4;
+    line-height: rem-calc(80px);
+    text-decoration: none;
+  }
+}
+.exampleImg{
+  margin: rem-calc(30px);
+  img{
+    width: 100%;
+  }
+}
 // set responsive
 @for $mediaIndex from 1 to length($mediaArray) + 1 {
   $media: nth($mediaArray, $mediaIndex);
