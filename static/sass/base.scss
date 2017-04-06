@@ -1,0 +1,222 @@
+@charset "UTF-8";
+@import "rem-calc";
+$version: "20150910";
+
+$img:"../images/";
+$mediaArray: "only screen and (max-width: 379px)",
+"only screen and (min-width: 380px) and (max-width: 399px)",
+"only screen and (min-width: 400px) and (max-width: 439px)",
+"only screen and (min-width: 440px) and (max-width: 479px)",
+"only screen and (min-width: 480px) and (max-width: 639px)",
+"only screen and (min-width: 640px) and (max-width: 679px)",
+"only screen and (min-width: 750px)";
+
+$rem-base: 36px;
+$ratioFor320: 640/320;
+$ratioFor380: 640/380;
+$ratioFor400: 640/400;
+$ratioFor440: 640/440;
+$ratioFor480: 640/480;
+$ratioFor640: 640/680;
+$ratioFor750: 640/750;
+
+$htmSizeArray: floor($rem-base/$ratioFor320),
+floor($rem-base/$ratioFor380),
+floor($rem-base/$ratioFor400),
+floor($rem-base/$ratioFor440),
+floor($rem-base/$ratioFor480),
+floor($rem-base/$ratioFor640),
+floor($rem-base/$ratioFor750);
+
+html,body,p{
+  padding: 0px;
+  margin: 0px;
+}
+body{
+  background-image: url("../images/bg.jpg");
+  background-size: 100%;
+}
+
+.success{
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg.jpg");
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  overflow: hidden;
+  .success_icon{
+    text-align: center;
+    position: absolute;
+    top:0px;
+    width: rem-calc(580px);
+    height: rem-calc(480px);
+    z-index: 10;
+    left: 50%;
+    margin-left: rem-calc(-290px);
+    img{
+      width: rem-calc(580px);
+    }
+  }
+  .goodInfo{
+    width: rem-calc(580px);
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 0px;
+    position: absolute;
+    top:rem-calc(450px);
+    left: 50%;
+    margin-left: rem-calc(-290px);
+    img{
+      max-width: 100%;
+    }
+    .name{
+      font-size: rem-calc(36px);
+      color: #666;
+      line-height: 2;
+    }
+    .info{
+      font-size: rem-calc(20px);
+      color: #999;
+      line-height: 2;
+      text-align: left;
+      padding-left: 20%;
+    }
+  }
+  .icons{
+    text-align: center;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    img{
+      height: 36px;
+      position: absolute;
+      margin-left: -18px;
+      animation: handlemove 2s infinite;
+    }
+  }
+  &.fail{
+
+  }
+}
+@keyframes handlemove {
+  from {bottom: 0px; opacity: 1;}
+  to {bottom: 26px; opacity: 0;}
+}
+
+
+.successOver{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:100%;
+  left: 0px;
+  display: block;
+  overflow: hidden;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/successbg.jpg");
+  .bigText{
+    color: #e20314;
+    font-size: rem-calc(60px);
+    text-align: center;
+    line-height: 2;
+    margin-top: 20px;
+  }
+  .smText{
+    color: #dd4a4a;
+    font-size: rem-calc(40px);
+    text-align: center;
+    line-height: 2;
+  }
+  .erweima{
+    background-color: #fff;
+    width: rem-calc(420px);
+    height: rem-calc(420px);
+    margin: 10px auto;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.8);
+    img{
+      width: 100%;
+    }
+  }
+  .logo{
+    text-align: center;
+    margin-top: 20px;
+    img{
+      width: rem-calc(400px);
+    }
+  }
+}
+.fail{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0px;
+  display: block;
+  overflow: hidden;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/sbbg.jpg");
+  .error_icon{
+    text-align: center;
+    position: absolute;
+    top:0px;
+    width: rem-calc(580px);
+    height: rem-calc(480px);
+    z-index: 10;
+    left: 50%;
+    margin-left: rem-calc(-290px);
+    img{
+      width: rem-calc(580px);
+    }
+  }
+  .erweima{
+    position: absolute;
+    top:rem-calc(450px);
+    width: rem-calc(420px);
+    height: rem-calc(420px);
+    background-color: #fff;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.7);
+    margin-left: rem-calc(-210px);
+    left: 50%;
+    img{
+      width: 100%;
+    }
+  }
+  .bigText{
+    position: absolute;
+    color: #e20314;
+    top:rem-calc(900px);
+    text-align: center;
+    width: 100%;
+    font-size: rem-calc(60px);
+  }
+  .smText{
+    position: absolute;
+    color: #e20314;
+    top:rem-calc(1000px);
+    text-align: center;
+    width: 100%;
+    font-size: rem-calc(40px);
+  }
+}
+
+// set responsive
+@for $mediaIndex from 1 to length($mediaArray) + 1 {
+  $media: nth($mediaArray, $mediaIndex);
+  $htmlFz: nth($htmSizeArray, $mediaIndex);
+  @media #{$media}
+  {
+    html {
+      font-size: $htmlFz;
+    }
+  }
+}
