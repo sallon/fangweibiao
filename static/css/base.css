@@ -49,9 +49,9 @@ body { background-image: url("../images/bg.jpg"); background-size: 100%; }
 
 .fail .erweima img { width: 100%; }
 
-.fail .bigText { position: absolute; color: #e20314; top: 25rem; text-align: center; width: 100%; font-size: 1.66667rem; }
+.fail .bigText { position: absolute; color: #e20314; top: 25rem; text-align: center; width: 100%; font-size: 1.75rem; }
 
-.fail .smText { position: absolute; color: #e20314; top: 27.77778rem; text-align: center; width: 100%; font-size: 1.11111rem; }
+.fail .smText { position: absolute; color: #e20314; top: 27.77778rem; text-align: center; width: 100%; font-size: 0.77778rem; }
 
 @media only screen and (max-width: 379px) { html { font-size: 18px; } }
 
